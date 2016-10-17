@@ -1,23 +1,74 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
+  mrkhanh: "Mr. Khanh Mata"
+  mrnhat: "Mr. Nguyen Hoang Nhat"
+  mrnguyen: "Mr. Tran Thao Nguyen"
+  khanhphone: "096 440 3444"
+  khanhmail: "radnvk@gmail.com"
+  khanhchatwork: "KhanhMata"
+  nhat: "Nguyen Hoang Nhat"
+  nhatphone: "not yet"
+  nhatmail: "not yet"
+  nhatchatwork: "not yet"
+  nguyenphone: "096 287 1867"
+  nguyenmail: "nguyen@gmail.com"
+  nguyenchatwork: "857585"
+  iteampro: "iTeam production"
+  title: "Framgia E-Testing System"
   hello: "Hello world"
+  name_system: "Framgia E-Testing"
+  title_system: "Framgia E-Testing System"
+  welcome: "Welcome to the Framgia E-learning System"
+  warning_login: "Please sign up or sign in to view!!!"
+  fb: "Facebook"
+  gethelp: "To get help on this page, see us at"
+  khanhmata: "Khanh Mata"
+  nguyen: "Tran Thao Nguyen"
+  rubyrailstutor: "Ruby on Rails Tutorial"
+  account: "Account"
+  contribute: "Contribute Questions"
+  admin_exams: "Exams"
+  home: "Home"
+  help: "Help"
+  about: "About"
+  designedby: "Designed by"
+  aboutus: "(a.k.a Khanh Nguyen),"
+  aboutus2: "and"
+  specialthank: "Specially thanks to Michael Hartl for the "
+  contact: "Contact"
+  contactus: "Contact us"
+  phone: "Phone:"
+  mail: "Mail:"
+  chatworkidct: "Chatwork:"
+  sign_up: "Sign up"
+  sign_up_user: "signup"
+  sign_in: "Sign in"
+  new_user: "New user?"
+  categories: "Categories"
+  create: "Create my account"
+  creates: "Create"
+  helloname: "Hello %{name}"
+  error_content: "The form contains"
+  not_found: "Not fount"
+  error: "Error"
+  footer: "Framgia"
+  modal_title: "Create Subject"
+  submit_button: "submit_button"
+  chatworkid: "Chatwork ID"
+  confirmation: "Confirmation"
+  submit: "Submit"
+  submit_button: "Create"
+  profile: "Profile"
+  login: "Log in"
+  logout: "Log out"
+  iteam: "An e-testing system designed by iTeam"
+  news: "News"
+  etesting: "Framgia Test System"
+  etest: "Etesting"
+  users: "Users"
+  unsuccess_login: "Invalid email/password combination"
+  welcome: "Welcome to Framgia E-testing System!"
+  please_login: "Please log in!"
+  remembercomputer: "Remember me on this computer"
+  signupnow: "Sign up now!"
+  form_error_messages: "The form contains %{plural}."
+  error_text: "error"
