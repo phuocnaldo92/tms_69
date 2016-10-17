@@ -1,0 +1,27 @@
+<% provide :title, t("sign_up") %>
+<h1><%= t "sign_up" %></h1>
+<%= simple_form_for(resource, as: resource_name,
+  url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+
+    <%= f.label :chatwork_id, t("chatworkid") %>
+    <%= f.text_field :chatwork_id, class: "form-control" %>
+
+    <%= f.input :email, required: true, autofocus: true %>
+
+    <%= f.input :password, required: true, hint: ("#{@minimum_password_length}
+      characters minimum" if @minimum_password_length) %>
+
+    <%= f.input :password_confirmation, required: true %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit t("submit"), class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<%= render "users/shared/links" %>
