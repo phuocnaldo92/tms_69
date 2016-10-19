@@ -24,6 +24,23 @@ class Admin::SubjectsController < ApplicationController
     end
   end
 
+  def update
+    if @subject.update_attributes subject_params
+      flash.now[:success] = t "flash.success.updated_subject"
+    else
+      flash.now[:danger] = t "flash.danger.updated_subject"
+    end
+    redirect_to admin_subjects_path
+  end
+
+  def destroy
+    if @subject.present? && @subject.destroy
+      flash.now[:success] = t "flash.success.deleted_subject"
+    else
+      flash.now[:danger] = t "flash.danger.deleted_subject"
+    end
+  end
+
   private
     def subject_params
       params.require(:subject).permit :name, :question_number, :duration
