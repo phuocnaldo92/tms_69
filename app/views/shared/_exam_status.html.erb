@@ -1,0 +1,7 @@
+<% if exam %>
+  <%= check_status exam %>
+<% else %>
+  <span class="label label-default">
+    <%= t "labels.status.exam.inactive" %>
+  </span>
+<% end %>

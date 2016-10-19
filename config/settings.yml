@@ -10,3 +10,16 @@ pagination:
 role:
   user: "User"
   admin: "Admin"
+status:
+  exam:
+    start: "start"
+    testing: "testing"
+    uncheck: "uncheck"
+    checked: "checked"
+    inactive: "inactive"
+exams:
+  default_score: 0
+  default_spent_time: 0
+  default_correct: false
+  notify_hour: 8
+  notify_priority: 0
