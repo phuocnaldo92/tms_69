@@ -1,6 +1,12 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 5px;
+}
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
@@ -30,7 +36,14 @@ textarea {
     color: #006600;
   }
 }
-
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th,
+.table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+  padding: 8px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
