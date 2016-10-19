@@ -34,11 +34,12 @@ class Admin::SubjectsController < ApplicationController
   end
 
   def destroy
-    if @subject.present? && @subject.destroy
+    if @subject.destroy
       flash.now[:success] = t "flash.success.deleted_subject"
     else
       flash.now[:danger] = t "flash.danger.deleted_subject"
     end
+    redirect_to admin_subjects_path
   end
 
   private
