@@ -1,13 +1,55 @@
-<footer class="footer">
-  <small>
-    <a><%= t "iteam" %></a>
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to t("help"), help_path %></li>
-      <li><%= link_to t("about"), about_path %></li>
-      <li><%= link_to t("contact"), contact_path %></li>
-      <li><%= link_to t("news"), Settings.framgialink %></li>
-    </ul>
-  </nav>
-</footer>
+<div class="footer-w3">
+  <div class="container">
+    <div class="footer-grids">
+      <div class="col-md-4 footer-grid">
+        <h4><%= t ".AboutUs" %></h4>
+        <p><%= t ".Duis" %>
+          <span><%= t ".Excepteur" %>
+          </span>
+        </p>
+      </div>
+        <div class="col-md-4 footer-grid">
+          <h4><%= t ".Instagram Posts" %></h4>
+          <div class="footer-grid1">
+            <%= link_to image_tag("w1.jpg", class:"img-responsive") %>
+          </div>
+          <div class="footer-grid1">
+            <%= link_to image_tag("w2.jpg", class:"img-responsive") %>
+          </div>
+          <div class="footer-grid1">
+            <%= link_to image_tag("w4.jpg", class:"img-responsive") %>
+          </div>
+           <div class="footer-grid1">
+             <%= link_to image_tag("w5.jpg", class:"img-responsive") %>
+           </div>
+           <div class="footer-grid1">
+             <%= link_to image_tag("w6.jpg", class:"img-responsive") %>
+           </div>
+           <div class="footer-grid1">
+             <%= link_to image_tag("w2.jpg", class:"img-responsive") %>
+           </div>
+           <div class="clearfix"> </div>
+        </div>
+      <div class="col-md-4 footer-grid">
+        <h4><%= t ".Information" %></h4>
+        <ul>
+          <li>
+            <i class="glyphicon glyphicon-map-marker" aria-hidden="true">
+            </i><%= t ".VinhTrungPlaza" %>
+          </li>
+          <li>
+            <i class="glyphicon glyphicon-earphone" aria-hidden="true">
+            </i><%= t ".phone" %>
+          </li>
+          <li>
+            <i class="glyphicon glyphicon-envelope" aria-hidden="true">
+            </i>
+            <a href="mailto:example@mail.com">
+            <%= link_to t(".gmail"), Settings.nguyenlink %></a>
+          </li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>

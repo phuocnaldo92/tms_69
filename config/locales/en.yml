@@ -78,6 +78,7 @@ en:
   forgot_pass: "Forgot your password?"
   send_reset: "Send me reset password instructions"
   back: "Back"
+  About Us: "About Us"
   alert_confirm: "Are you sure?"
   login: "Login"
   waiting_confirmation: "Currently waiting confirmation for: "
@@ -89,12 +90,122 @@ en:
   auto_off: "off"
   edit_password_hint: "Leave it blank if you don't want to change it"
   current_password_hint: "We need your current password to confirm your changes"
+  static_pages:
+    home:
+      GetEverythingRight: "Get Everything Right"
+      cupidatatnonproident: "cupidatat non proident"
+      Previous: "Previous"
+      LatestEvents: "Latest Events"
+      Studie: "Studie"
+      ExpertTeachers: "Expert Teachers"
+      Nullamegestasdiameufelis: "Nullam egestas diam eu felis"
+      Next: "Next"
+      VideoCourses: "Video Courses"
+      Library: "Library"
+      OnlineCourses: "Online Courses"
+      WelcomeToFramgiaVietNam: "Welcome To Framgia Viet Nam"
+      Mycompanyoffered: "My company offered"
+      openacompany: "open a company"
+      Vietnam: "Vietnam is Framgia Japanese IT company specializing
+              in the design, application development, platform games
+              that run on smartphones, social networking platforms,
+              production and application development website.
+              Framgia Vietnam officially established in Hanoi on May 10/2012."
+      Praesent vestibulum molestie lacus: "Praesent vestibulum molestie lacus"
+      Donec: "Donec sagittis interdum tellusplacerat adipiscing"
+      Nullaconsecteturadipiscing: "Nulla consectetur adipiscing"
+      Donecac: "Donec ac rhoncus libero vestibulum aliquet"
+      Erci: "Erci eu tincidunt lacinia sit amet pretium"
+      Monday: "Monday june 16"
+      Proinfermentum: "Proin fermentum diam eu massa blandit,
+                  congue finibus ante pulvinar. Aliquam lacinia odio eros."
+      Tuesday: "Tuesday june 16"
+      Wednesday: "Wednesday june 16"
+      Friday: "Friday june 16"
+      LatestNews: "Latest News"
+      Thursday: "Thursday june 16"
+      Excepteur: "Excepteur sint occaecat cupidatat non proident"
+      Quisque: "Quisque at tellus ullamcorper, pharetra arcu a,
+                suscipit purus. Nullam feugiat in augue in consequat.
+                Sed ac dictum ligula, et pellentesque velit.
+                In gravida eu felis sit amet molestie.
+                Morbi sed ex ac enim finibus vulputate.
+                Cras arcu magna, auctor ornare neque in,
+                finibus tincidunt augue."
+      Morbised: "Morbi sed ex ac enim finibus vulputate."
+      Nullam: "Nullam egestas diam eu felis dignissim,
+                    vitae posuere ex pretium. Morbi quam purus,
+                    rhoncus eget enim sed, laoreet venenatis arcu.
+                    Curabitur vestibulum, orci pulvinar pretium cursus,
+                    diam ante pretium elit,
+                    at finibus nisl ligula vitae enim.
+                    eu eleifend enim condimentum ac."
+      Excepteursint: "Excepteur sint occaecat cupidatat non proident"
+      Quisqueattellus: "Quisque at tellus ullamcorper, pharetra arcu a,
+                suscipit purus. Nullam feugiat in augue in consequat.
+                Sed ac dictum ligula, et pellentesque velit.
+                In gravida eu felis sit amet molestie.
+                Morbi sed ex ac enim finibus vulputate.
+                Cras arcu magna, auctor ornare neque in,
+                finibus tincidunt augue."
+  users:
+    sessions:
+      new:
+        MajesticLoginForm: "Majestic Login Form"
+        Login: "Log in"
+        Youremailorname: "Your email or name"
+        Yourpassword: "Your password"
+        Password: "Password"
+        EMAILORUSERNAME: "EMAIL OR USER NAME"
+    registrations:
+      new:
+        title: "Form Signup"
+        Name: "Name"
+        Chatwork ID: "Chatwork ID"
+        Email: "Email"
+        Password: "Password"
+        PasswordConfirmation: "Password Confirmation"
+        waiting_confirmation: "waiting_confirmation"
+        Follow: "Follow us on :"
+      edit:
+        title: "Edit User"
+        Password: "Password"
+        PasswordConfirmation: "Password Confirmation"
+        CurrentPassword: "CurrentPassword"
+        delete_account_button: "delete_account_button"
+        delete_account_confirm: "delete_account_confirm"
+  layouts:
+    header:
+      phones: "1 599-033-5036"
+      date: "Mon-Sat 9:00 Am to 16:00 Pm"
+      address: "General Pvt 66, Dong Da Hanoi, Vietnam."
+      thugon: "Toggle navigation"
+      framgia: "Framgia"
+      test: "Test System"
+      users: "Users"
+    footer:
+      AboutUs: "About Us"
+      Duis: "Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu
+          fugiat nulla pariatur."
+      Excepteur: "Excepteur sint occaecat
+          cupidatat non proident
+          sunt in culpa qui officia deserunt laborum"
+      Instagram Posts: "Instagram Posts"
+      Information: "Information"
+      VinhTrungPlaza: "Vinh Trung Plaza."
+      phone: "0962 871 867"
+      gmail: "tranthaonguyen.dsher@gmail.com"
   admin:
     subjects:
       index:
         create_subject: "New Subject"
         title: "All subjects"
+        name: "name"
+        duration: "duration"
         edit: "Edit"
+        function: "Function"
+        Admin: "Admin can create schools subject."
         delete: "Delete"
         delete_subject_confirm: "Are you sure you want to delete this subject? This action cannot be undone!"
         index: "Index"
@@ -103,6 +214,15 @@ en:
         duration: "Duration"
         actions: "Actions"
         delete: "Delete"
+        new_subject: "New Subject"
+        delete_subject_confirm: "Are you sure you want to delete this subject? This action cannot be undone!"
+        index: "Index"
+        name: "Subject's Name"
+        edit: "Edit"
+        delete: "Delete"
+        question_number: "Questions"
+        duration: "Duration"
+        actions: "Actions"
       new:
         create_subject: "Create Subject"
         cancel_button: "Cancel"

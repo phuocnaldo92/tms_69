@@ -1,0 +1,11 @@
+nav.link-effect-2 {
+  @media (min-width: 690px) {
+    overflow: visible;
+    display: inline-block;
+  }
+}
+.dropdown-menu {
+  @media (min-width: 690px) {
+    position: absolute;
+  }
+}
