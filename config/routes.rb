@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root "subjects#index"
     resources :subjects
+    resources :users
   end
 
   root "static_pages#home"
