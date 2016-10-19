@@ -10,6 +10,9 @@ class Admin::SubjectsController < ApplicationController
     @subject = Subject.new
   end
 
+  def edit
+  end
+
   def show
   end
 
@@ -27,10 +30,11 @@ class Admin::SubjectsController < ApplicationController
   def update
     if @subject.update_attributes subject_params
       flash.now[:success] = t "flash.success.updated_subject"
+      redirect_to admin_subjects_path
     else
       flash.now[:danger] = t "flash.danger.updated_subject"
+      render :edit
     end
-    redirect_to admin_subjects_path
   end
 
   def destroy
