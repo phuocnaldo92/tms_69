@@ -6,6 +6,12 @@ class User < ApplicationRecord
   has_many :exams
   has_many :suggest_questions
 
+  scope :newest, ->{order created_at: :desc}
   enum role: {user: 1, admin: 0}
+  validates :name, presence: true, length: {maximum: 50}
+  validates :chatwork_id, presence: true, length: {maximum: 50}
 
+  def check user
+    user == current_user
+  end
 end

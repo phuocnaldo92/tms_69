@@ -1,0 +1,16 @@
+<table class="table table-hover table-bordered table-striped">
+  <thead class="bg-primary">
+    <tr>
+      <th class="center width_50_px"><%= t "admin.users.index_num" %></th>
+      <th class="center"><%= t "admin.users.name" %></th>
+      <th class="center"><%= t "admin.users.email" %></th>
+      <th class="center"><%= t "admin.users.chatwork" %></th>
+      <th class="center width_70_px"><%= t "admin.users.role" %></th>
+      <th class="center width_200_px"><%= t "admin.users.create_at" %></th>
+      <th class="center width_240_px" colspan="3"><%= t "admin.users.action" %> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: "user_item", collection: @users, as: "user" %>
+  </tbody>
+</table>
