@@ -10,18 +10,40 @@ class Admin::SubjectsController < ApplicationController
     @subject = Subject.new
   end
 
+  def edit
+  end
+
   def show
   end
 
   def create
     @subject = Subject.new subject_params
     if @subject.save
-      flash[:success] = "flash.susscess.create_subject"
+      flash[:success] = t "flash.susscess.create_subject"
       redirect_to admin_subjects_path
     else
-      flash[:danger] = "flash.danger.created_subject"
+      flash[:danger] = t "flash.danger.created_subject"
       render :new
     end
+  end
+
+  def update
+    if @subject.update_attributes subject_params
+      flash.now[:success] = t "flash.success.updated_subject"
+      redirect_to admin_subjects_path
+    else
+      flash.now[:danger] = t "flash.danger.updated_subject"
+      render :edit
+    end
+  end
+
+  def destroy
+    if @subject.destroy
+      flash.now[:success] = t "flash.success.deleted_subject"
+    else
+      flash.now[:danger] = t "flash.danger.deleted_subject"
+    end
+    redirect_to admin_subjects_path
   end
 
   private
