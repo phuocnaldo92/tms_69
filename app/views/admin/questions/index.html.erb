@@ -1,0 +1,22 @@
+<h1><%= t ".title" %></h1>
+<div class="row">
+  <div class="col-md-12">
+    <%= link_to t(".new_question"), new_admin_question_path,
+      remote: true, class: "btn btn-primary" %>
+  </div>
+</div>
+<div class="row">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr class="info">
+        <th><%= t ".content" %></th>
+        <th><%= t ".create_by" %></th>
+        <th><%= t ".actions" %></th>
+      </tr>
+    </thead>
+    <tbody class="level-index">
+      <%= render "list" %>
+    </tbody>
+  </table>
+  <div id="question-modal" class="modal fade"></div>
+</div>

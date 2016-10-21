@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <%= t "admin.questions.question", content: @question.content %>
+      <%= @question.content %>
+    </h3>
+  </div>
+  <div>
+    <% @question.answers.each do |answer| %>
+      <div class="radio">
+        <% if @question.single_choice? || @question.multi_choice? %>
+          <% if answer.is_correct? %>
+            <%= check_box_tag answer.content, t(".accept"), true, disabled: true %>
+          <% else %>
+            <%= check_box_tag answer.content, t(".deny"), false, disabled: true %>
+          <% end %>
+          <%= answer.content %>
+        <% else %>
+          <label>
+            <span class="list-group-item-success">
+              <%= t "result.answer_correct" %>
+              <%= answer.content %>
+            </span>
+          </label>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

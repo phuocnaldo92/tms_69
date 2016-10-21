@@ -282,6 +282,45 @@ en:
         update_fail: "Update user fail"
       index:
         title: "All users"
+    questions:
+      answer: "Answer"
+      new:
+        suggest_question: "Suggest Question"
+        create_button: "Save"
+      show:
+        accept: "Yes"
+        deny: "No"
+      edit:
+        save_button: "Save"
+      form:
+        question_content: "Type question's content here..."
+        add_answer: "Add answer"
+        submit_button: "Suggest"
+        question_content_error: "At least 5 characters"
+      answer_fields:
+        answer_content: "Type answer's content here..."
+        remove_answer: "Remove"
+        answer_content_error: "Answer must have content"
+        answer: "Answer"
+      list:
+        suggested_questions: "Suggested Questions"
+        delete_question_confirm: "Do you want delet this question?"
+        new_question: "New question"
+        question: "Question"
+        subject_name: "Subject's name"
+        answer_type: "Answer's type"
+        status: "Status"
+        content: "Content"
+        create_by: "Create by"
+        edit: "Edit"
+      errors:
+        must_more_one: "must has more than 1 answer"
+        must_has_correct_answer: "must has at least 1 correct answer"
+      questions:
+        index:
+          new_question: "New Question"
+        new:
+          create_button: "Save"
   time:
     formats:
       date_month_year_concise: "%d-%m-%y"
