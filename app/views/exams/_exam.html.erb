@@ -1,0 +1,18 @@
+<tr>
+  <td><%= l @exam.created_at, format: :datetime_format %></td>
+  <td><%= @exam.name %></td>
+  <td><%= render "shared/exam_status", exam: @exam %></td>
+  <td class="center"><%= @exam.subject.duration %></td>
+  <td class="center"><%= @exam.exam_questions.size %></td>
+  <td><%= l Time.at(@exam.spent_time).utc, format: :time_format  %></td>
+  <td class="center">
+    <%= @exam.checked? ? "#{exam.score}/#{exam.exam_questions.count}" : "-" %>
+  </td>
+  <% if @exam.start? %>
+    <td><%= link_to t("start"), exam_path(@exam),
+      class: "btn btn-primary" %></td>
+  <% else %>
+    <td><%= link_to t("view"), exam_path(@exam),
+      class: "btn btn-success" %></td>
+  <% end %>
+</tr>
