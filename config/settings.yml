@@ -7,3 +7,6 @@ nothing: "#"
 pagination:
   per_page: 10
   size: 10
+role:
+  user: "User"
+  admin: "Admin"

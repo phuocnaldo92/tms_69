@@ -1,4 +1,5 @@
 class Admin::SubjectsController < ApplicationController
+  before_action :verify_admin
   before_action :load_subject, except: [:index, :new, :create]
 
   def index
