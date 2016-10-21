@@ -217,9 +217,13 @@ en:
         new_subject: "New Subject"
         delete_subject_confirm: "Are you sure you want to delete this subject? This action cannot be undone!"
         index: "Index"
+        name: "Subject's Name"
         question_number: "Questions"
         duration: "Duration"
         actions: "Actions"
+      subjects:
+        edit: "Edit"
+        delete: "Delete"
       new:
         create_subject: "Create Subject"
         cancel_button: "Cancel"
@@ -241,6 +245,24 @@ en:
         new_question: "Add question"
         delete_question_confirm: "Do you want delete this question?"
         content: "Content"
+    levels:
+      edit:
+        edit_level: "Edit Level"
+        edit_button: "Create"
+        save_button: "Save changes"
+      index:
+        actions: "Actions"
+        new_level: "New Level"
+        title: "All levels"
+        name: "name"
+        question_number: "Question_number"
+        function: "Function"
+        Admin: "Admin can create schools subject."
+      level:
+        delete: "Delete"
+        edit: "Edit"
+      form:
+        cancel_button: "Cancel"
     users:
       index_num: "Index"
       name: "Name"
