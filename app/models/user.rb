@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
   has_many :exams
-  has_many :suggest_questions
+  has_many :suggest_questions, dependent: :destroy
 
   scope :newest, ->{order created_at: :desc}
   enum role: {user: 1, admin: 0}
