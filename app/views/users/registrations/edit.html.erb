@@ -1,36 +1,47 @@
 <% provide :title, t("update_user") %>
-<h2><%= t "update_user" %></h2>
+<div class="agiles">
+  <div class="main">
+    <%= tag(:br) %><%= tag(:br) %>
+      <div class="signup"><center><h4><%= t ".title" %></h4></center></div>
+    <%= tag(:br) %><%= tag(:br) %>
+    <div class="signin-form profile">
+      <div class="login-form">
+        <%= simple_form_for resource, as: resource_name,
+          url: registration_path(resource_name),
+          html: {method: :put} do |f| %>
+          <%= f.error_notification %>
 
-<%= simple_form_for resource, as: resource_name,
-  url: registration_path(resource_name), html: {method: :put} do |f| %>
-  <%= f.error_notification %>
+          <%= f.text_field :name %>
 
-  <div class="form-inputs">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: "form-control" %>
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.label :chatwork_id %>
-    <%= f.email_field :chatwork_id, class: "form-control" %>
+          <%= f.text_field :chatwork_id %>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p><%= t "waiting_confirmation" %><%= resource.unconfirmed_email %></p>
-    <% end %>
+          <%= f.email_field :email %>
 
-    <%= f.input :password, autocomplete: t("auto_off"), hint:
-      t("edit_password_hint"), required: false %>
-    <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: t("current_password_hint"),
-      required: true %>
+          <% if devise_mapping.confirmable? && resource
+            .pending_reconfirmation? %>
+            <p><%= t "waiting_confirmation" %>
+              <%= resource.unconfirmed_email %>
+            </p>
+          <% end %>
+
+          <%= f.password_field :password, autocomplete: "off",
+            placeholder: t(".Password") %>
+
+          <%= f.password_field :password_confirmation, autocomplete: "off",
+            placeholder: t(".PasswordConfirmation") %>
+
+          <%= f.password_field :current_password, autocomplete: "off",
+            placeholder: t(".CurrentPassword") %>
+
+          <%= f.button :submit, t("update_profile") %>
+
+          <%= link_to t("cancel_account"), registration_path(resource_name),
+            data: { confirm: t("are_you_sure") }, method: :delete %>
+        <% end %>
+        <%= link_to t("back"), :back %>
+        <%= render "users/shared/links" %>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, t("update_profile") %>
-  </div>
-<% end %>
-
-<h3><%= t "cancel_account" %></h3>
-
-<p><%= link_to t("cancel_account"), registration_path(resource_name),
-  data: { confirm: t("are_you_sure") }, method: :delete %></p>
-
-<%= link_to t("back"), :back %>
+  <div class="clear"></div>
+</div>
