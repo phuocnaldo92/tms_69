@@ -2,7 +2,7 @@ class SuggestQuestion < ApplicationRecord
   belongs_to :user
   belongs_to :subject
 
-  has_many :suggest_answers
+  has_many :suggest_answers, dependent: :destroy
 
   scope :alphabet, ->{order :content}
   enum status: {not_confirm: 0, confirmed: 1, rejected: 2}
@@ -22,7 +22,7 @@ class SuggestQuestion < ApplicationRecord
       if s_a.size <= Settings.minimum_suggest_answer
         errors.add :suggest_answers, I18n.t("questions.errors.must_more_one")
       end
-      if s_a.reject{|suggest_answer| !s_a.is_correct?}
+      if s_a.reject{|suggest_answer| !suggest_answer.is_correct?}
           .count == Settings.reject_suggest_answer
         errors.add :suggest_answers, I18n
           .t("questions.errors.must_has_correct_answer")

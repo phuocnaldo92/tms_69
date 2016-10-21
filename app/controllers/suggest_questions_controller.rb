@@ -1,5 +1,6 @@
 class SuggestQuestionsController < ApplicationController
-  before_action :authenticate_user!, :load_all_subject
+  before_action :authenticate_user!
+  before_action :load_all_subject, only: [:new, :create, :edit]
   before_action :load_suggest_question, except: [:index, :new, :create]
 
   def index
@@ -8,6 +9,7 @@ class SuggestQuestionsController < ApplicationController
   end
 
   def new
+    @suggest_question = current_user.suggest_questions.new
     @suggest_question.suggest_answers.new
   end
 
@@ -51,9 +53,9 @@ class SuggestQuestionsController < ApplicationController
 
   private
   def suggest_question_params
-    params.require(:suggest_question).permit :id, :content, :answer_type,
-      :subject_id, suggest_answers_attributes: [:id, :content, :is_correct,
-      :_destroy]
+    params.require(:suggest_question).permit :content, :answer_type,
+      :subject_id, suggest_answers_attributes: [:content, :is_correct,
+        :_destroy, :suggest_question_id]
   end
 
   def load_all_subject
@@ -64,7 +66,7 @@ class SuggestQuestionsController < ApplicationController
     @suggest_question = SuggestQuestion.find_by id: params[:id]
     unless @suggest_question
       flash.now[:danger] = t "flash.danger.question_not_found"
-      redirect_to suggest_question_path
+      redirect_to suggest_questions_path
     end
   end
 end

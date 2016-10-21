@@ -1,0 +1,10 @@
+<% @suggest_questions.each_with_index do |suggest_question, index| %>
+  <tr>
+    <td><%= index + Settings.each_question %></td>
+    <td><%= link_to suggest_question.content,
+      suggest_question_path(suggest_question) %></td>
+    <td><%= suggest_question.subject.name %></td>
+    <td><%= suggest_question.answer_type %></td>
+    <td><%= suggest_question.status %></td>
+  </tr>
+<% end %>
