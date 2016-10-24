@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
-
   root "static_pages#home"
+  devise_for :users
 
   namespace :admin do
     root "subjects#index"
@@ -12,7 +11,7 @@ Rails.application.routes.draw do
   get "help" => "static_pages#help"
   get "about" => "static_pages#about"
   get "contact" => "static_pages#contact"
-  get "contribute" => "static_pages#contribute"
   get "signup" => "users#new"
   resources :exams
+  resources :suggest_questions
 end

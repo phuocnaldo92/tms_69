@@ -66,11 +66,11 @@ ActiveRecord::Schema.define(version: 20161019015859) do
   end
 
   create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "type"
-    t.text     "content",    limit: 65535
+    t.integer  "answer_type"
+    t.text     "content",     limit: 65535
     t.integer  "level_id"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.index ["level_id"], name: "index_questions_on_level_id", using: :btree
   end
 
@@ -93,12 +93,12 @@ ActiveRecord::Schema.define(version: 20161019015859) do
 
   create_table "suggest_questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "status"
-    t.integer  "type"
-    t.text     "content",    limit: 65535
+    t.integer  "answer_type"
+    t.text     "content",     limit: 65535
     t.integer  "user_id"
     t.integer  "subject_id"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.index ["subject_id"], name: "index_suggest_questions_on_subject_id", using: :btree
     t.index ["user_id"], name: "index_suggest_questions_on_user_id", using: :btree
   end
