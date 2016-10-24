@@ -1,4 +1,5 @@
 class ExamsController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @exam = current_user.exams.new
