@@ -1,4 +1,5 @@
 class Admin::LevelsController < ApplicationController
+  before_action :verify_admin
   before_action :load_level, except: [:index, :new, :create]
 
   def index

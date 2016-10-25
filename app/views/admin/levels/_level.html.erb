@@ -1,5 +1,6 @@
 <% @levels.each do |level| %>
   <tr>
+    <td><%= level.subject.name %></td>
     <td><%= link_to level.name, [:admin, level] %></td>
     <td><%= level.question_number %></td>
     <td>
