@@ -1,0 +1,50 @@
+<% provide :modal_title, t(".edit_question") %>
+<% provide :submit_button, t(".save_button") %>
+<% provide :title, t("title") %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">
+      <div>
+        <%= t "question.question" %>
+        <%= @suggest_question.content %>
+      </div>
+      <div>
+        <%= t "question.type" %>
+        <%= t @suggest_question.answer_type %>
+      </div>
+      <div>
+        <%= t "question.status" %>:
+      <%= t @suggest_question.status %>
+      </div>
+    </div>
+  </div>
+  <div>
+    <% @suggest_question.suggest_answers.each do |answer| %>
+      <div class ="checkbox">
+        <label>
+          <%= check_box_tag answer.content, answer.is_correct? ?
+            t("accept") : t("deny"), true, disabled: true %>
+          <%= answer.content %>
+        </label>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <%= t ".confirm" %>
+      </div>
+      <div class="panel-body">
+      <% Settings.suggest_questions.status.each do |key, value| %>
+        <%= link_to admin_suggest_question_path(@suggest_question,
+          suggest_question: {status: key}), method: :put, class: "button" do %>
+          <%= t value %>
+        <% end %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

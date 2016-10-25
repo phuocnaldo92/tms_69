@@ -1,6 +1,6 @@
 class SuggestQuestionsController < ApplicationController
   before_action :authenticate_user!
-  before_action :load_all_subject, only: [:new, :create, :edit]
+  before_action :load_all_subject, except: [:index, :destroy]
   before_action :load_suggest_question, except: [:index, :new, :create]
 
   def index

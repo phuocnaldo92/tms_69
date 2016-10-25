@@ -1,6 +1,6 @@
 class Admin::QuestionsController < ApplicationController
   before_action :verify_admin
-  before_action :load_levels, only: [:index, :new, :edit]
+  before_action :load_levels, except: [:index, :destroy]
   before_action :load_question, except: [:index, :new, :create]
 
   def index
@@ -17,7 +17,7 @@ class Admin::QuestionsController < ApplicationController
   end
 
   def create
-    @question = current_user.questions.build question_params
+    @question = Question.new question_params
     if @question.save
       flash.now[:success] = t "flash.success.created_question"
       redirect_to root_path
@@ -55,7 +55,7 @@ class Admin::QuestionsController < ApplicationController
   end
 
   def load_question
-    @question = Question.find_by id: params[:id]
+    @question = Question.includes(level: :subject).find_by id: params[:id]
     unless @question
       flash.now[:danger] = t "flash.danger.question_not_found"
       redirect_to admin_questions_path

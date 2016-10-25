@@ -1,7 +1,7 @@
 <div class="modal-dialog">
   <div class="modal-content" id="question">
     <div class="modal-header"><h1><%= yield(:modal_title) %></h1></div>
-    <%= simple_form_for [:admin, @question], remote: true do |f| %>
+    <%= simple_form_for [:admin, @question] do |f| %>
       <div class="modal-body">
         <div class="form_errors">
           <%= render "shared/error_messages", object: @question %>

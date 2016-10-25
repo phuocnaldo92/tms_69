@@ -1,16 +1,16 @@
 <% provide :title, t("login") %>
-<h1 class="w3ls"><%= t ".MajesticLoginForm" %></h1>
+<h1 class="w3ls"><%= t ".login_form" %></h1>
 <div id="container_demo" >
   <div id="wrapper">
     <div id="login" class="animate form">
       <%= simple_form_for(resource, as: resource_name,
         url: session_path(resource_name)) do |f| %>
-      <h2><%= t ".Login" %></h2>
+      <h2><br></h2>
       <p>
         <label for="username" class="uname">
-          <span><%= t ".Youremailorname" %></span>
+          <span><%= t ".login_email" %></span>
         </label>
-        <%= f.email_field :email, placeholder: t(".EMAILORUSERNAME") %>
+        <%= f.email_field :email, placeholder: t(".email_holder") %>
       </p>
       <p>
         <label for="password" class="youpasswd">

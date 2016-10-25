@@ -1,1 +1,47 @@
-<h1><%= @subject.name %></h1>
+<div class="banner-w3agile">
+  <div class="container">
+    <h3>
+      <span>
+        <%= @subject.name %>
+      </span>
+    </h3>
+  </div>
+</div>
+<div class="containe">
+  <div class="col-md-9 contact-left cont">
+  <h4><%= t ".subject_levels" %></h4>
+  <table class="table table-bordered">
+    <thead class="thead-inverse">
+      <tr>
+        <th><%= t ".subject_name" %></th>
+        <th><%= t ".name" %></th>
+        <th><%= t ".question_number" %></th>
+        <th><%= t ".actions" %></th>
+      </tr>
+    </thead>
+    <tbody class="subject-index">
+    <% @levels.each do |level| %>
+      <tr>
+        <td><%= @subject.name %></td>
+        <td><%= link_to level.name, [:admin, level] %></td>
+        <td><%= level.question_number %></td>
+        <td>
+          <div class="btn-group" role="group">
+            <%= link_to t(".edit"), edit_admin_level_path(level.id),
+              class: "glyphicon glyphicon-pencil" %>
+          </div>
+          <div class="btn-group" role="group">
+            <%= link_to t(".delete"), admin_level_path(level.id),
+              method: :delete, data: {confirm: t(".delete_levels_confirm")},
+              class: "glyphicon glyphicon-remove" %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+  </div>
+  <div class="col-md-3 contact-left"></div>
+  <div class="col-md-9 contact-left">
+  </div>
+</div>

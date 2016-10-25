@@ -1,1 +1,39 @@
-<h1><%= @level.name %></h1>
+<div class="banner-w3agile">
+  <div class="container">
+    <h3>
+      <span>
+        <%= @level.name %>
+      </span>
+    </h3>
+  </div>
+</div>
+<div class="row">
+  <h4><%= t ".level_questions" %></h4>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr class="info">
+        <th><%= t ".content" %></th>
+        <th><%= t ".subject" %></th>
+        <th><%= t ".level" %></th>
+        <th><%= t ".actions" %></th>
+      </tr>
+    </thead>
+    <tbody class="level-index">
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= link_to question.content, [:admin, question] %></td>
+        <td><%= @level.subject.name %></td>
+        <td><%= question.level.name %></td>
+        <td>
+          <%= link_to t(".edit"), edit_admin_question_path(question.id),
+            class: "btn btn-primary" %>
+          <%= link_to t(".delete"), admin_questions_path,
+            method: :delete, data: {confirm: t(".delete_question_confirm")},
+            class: "btn btn-danger" %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <div id="question-modal" class="modal fade"></div>
+</div>
