@@ -2,7 +2,7 @@
   <div class="col-md-10 col-md-offset-1">
     <h2>
       <b><%= t ".suggested_questions" %></b>
-      <%= link_to "#",
+      <%= link_to new_suggest_question_path,
         class: "pull-right link-text-question" do %>
         <i class="glyphicon glyphicon-plus" aria-hidden="true"></i>
         <%= t ".new_question" %>
@@ -18,16 +18,7 @@
           <th class="state"><%= t ".status" %></th>
         </tr>
       </thead>
-      <% @suggest_questions.each_with_index do |suggest_question, index| %>
-        <tr>
-          <td><%= index + Settings.each_question %></td>
-          <td><%= link_to suggest_question.content,
-            suggest_question_path(suggest_question) %></td>
-          <td><%= suggest_question.subject.name %></td>
-          <td><%= suggest_question.answer_type %></td>
-          <td><%= suggest_question.status %></td>
-        </tr>
-      <% end %>
+      <%= render "list" %>
     </table>
   </div>
 </div>
