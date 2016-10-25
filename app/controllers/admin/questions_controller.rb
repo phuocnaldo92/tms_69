@@ -20,7 +20,7 @@ class Admin::QuestionsController < ApplicationController
     @question = Question.new question_params
     if @question.save
       flash.now[:success] = t "flash.success.created_question"
-      redirect_to root_path
+      redirect_to admin_questions_path
     else
       flash.now[:danger] = t "flash.danger.created_question"
       render :new

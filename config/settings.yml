@@ -8,12 +8,14 @@ minimum_suggest_answer: 1
 minimum_answer: 1
 reject_suggest_answer: 0
 each_question: 1
+each_user: 1
+user_per_page: 10
 pagination:
   per_page: 10
   size: 10
 role:
-  user: "User"
-  admin: "Admin"
+  user: user
+  admin: admin
 status:
   exam:
     start: "start"

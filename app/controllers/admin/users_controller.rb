@@ -35,7 +35,14 @@ class Admin::UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit :name, :email,
-      :chatwork_id, :password, :password_confirmation
+      :chatwork_id, :password, :password_confirmation, :role
   end
 
+  def load_user
+    @user = User.find_by id: params[:id]
+    unless @user
+      flash.now[:danger] = t "flash.danger.user_not_found"
+      redirect_to admin_users_path
+    end
+  end
 end
