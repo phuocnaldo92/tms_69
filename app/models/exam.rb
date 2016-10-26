@@ -25,7 +25,17 @@ class Exam < ApplicationRecord
     if self.start?
       self.testing!
       self.update started_at: Time.now
+    elsif self.testing?
+      if (get_remain_time < 0 || is_finished_or_checked)
+        self.uncheck!
+      end
+      update_spent_time
     end
+  end
+
+  def get_remain_time
+    endtime = self.started_at + subject.duration.minutes
+    seconds = endtime.to_i - Time.now.to_i
   end
 
   private
@@ -35,9 +45,16 @@ class Exam < ApplicationRecord
       confirmed_questions = subject.levels[i].questions
         .random subject.levels[i].question_number
       confirmed_questions.each do |question|
-      self.exam_questions.build question_id: question.id,
-        is_correct: Settings.exams.default_correct
+        self.exam_questions.build question_id: question.id,
+        content: question.content, is_correct: Settings.exams.default_correct
       end
     end
+  end
+
+  def update_spent_time
+    start_time = self.started_at
+    seconds = self.updated_at.to_i - start_time.to_i
+    seconds = subject.duration.minutes if seconds > subject.duration.minutes
+    self.update spent_time: seconds
   end
 end
