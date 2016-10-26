@@ -1,6 +1,8 @@
 nav.link-effect-2 {
   @media (min-width: 690px) {
     overflow: visible;
+    margin-left: 258px;
+    width:42%;
     display: inline-block;
   }
 }
@@ -71,4 +73,11 @@ input, button, select, textarea {
   font-family: inherit;
   font-size: 17px;
   line-height: inherit;
+}
+.agiler {
+  height :900px;
+  background: url(banner1.jpg)repeat repeat;
+  margin-top: -56px;
+  margin-right: auto;
+  margin-left: auto;
 }

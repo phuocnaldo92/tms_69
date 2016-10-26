@@ -6629,3 +6629,24 @@ p {
     margin-bottom: 20px;
   }
 }
+.containes{
+  padding-right: 15px;
+  padding-left: 15px;
+  height :1200px;
+  margin-top :50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.thead-inverse>tr>th {
+  background-image: linear-gradient(to bottom,#f5f5f5 0,#e8e8e8 100%);
+    background-repeat: repeat-x;
+    color:#333;
+  }
+.img-responsi {
+  width:23px;
+  height:23px;
+}
+.modal-dialog {
+  background: #fff;
+  top: 80px;
+}
