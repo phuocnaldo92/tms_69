@@ -1,8 +1,9 @@
 <div class="banner-w3agile">
-  <div class="container">
+   <div class="container">
     <h3>
-      <span> <%= link_to t(".new_subject"), new_admin_subject_path,
-        class: "btn btn-primarys"%>
+      <span>
+        <%= link_to t(".new_subject"), new_admin_subject_path,
+        remote: true, class: "btn btn-primarys" %>
       </span>
     </h3>
   </div>
@@ -27,8 +28,8 @@
       <tr>
         <th class="text-center"><%= t ".name" %></th>
         <th class="text-center"><%= t ".duration" %></th>
-        <th class="text-center"><%= t ".edit" %></th>
-        <th class="text-center"><%= t ".delete" %></th>
+        <th class="text-center" colspan="2"><%= t ".actions" %></th>
+
       </tr>
     </thead>
     <tbody class="subject-index">

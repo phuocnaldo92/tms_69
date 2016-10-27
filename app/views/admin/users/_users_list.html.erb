@@ -1,16 +1,36 @@
-<table class="table table-hover table-bordered table-striped">
-  <thead class="bg-primary">
-    <tr>
-      <th class="center width_50_px"><%= t "admin.users.index_num" %></th>
-      <th class="center"><%= t "admin.users.name" %></th>
-      <th class="center"><%= t "admin.users.email" %></th>
-      <th class="center"><%= t "admin.users.chatwork" %></th>
-      <th class="center width_70_px"><%= t "admin.users.role" %></th>
-      <th class="center width_200_px"><%= t "admin.users.create_at" %></th>
-      <th class="center width_240_px" colspan="3"><%= t "admin.users.action" %> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render partial: "user_item", collection: @users, as: "user" %>
-  </tbody>
-</table>
+<div class="banner-w3agile">
+  <div class="container">
+    <h3>
+      <span>
+        <%= t (".all_user") %>
+      </span>
+    </h3>
+  </div>
+</div>
+<div class="containe">
+  <div class="col-md-12">
+    <div class="responsive-table">
+      <table class="table table-bordered">
+        <thead class="thead-inverse">
+          <tr>
+            <th class="center width_50_px">
+              <%= t "admin.users.index_num" %>
+            </th>
+            <th class="text-center"><%= t "admin.users.name" %></th>
+            <th class="text-center"><%= t "admin.users.email" %></th>
+            <th class="text-center"><%= t "admin.users.chatwork" %></th>
+            <th class="text-center"><%= t "admin.users.role" %></th>
+            <th class="text-center"><%= t "admin.users.create_at" %></th>
+            <th class="text-center" colspan="3">
+              <%= t "admin.users.action" %>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render partial: "user_item", collection: @users, as: "user" %>
+        </tbody>
+      </table>
+      <%= will_paginate @users %>
+      </div>
+  </div>
+</div>

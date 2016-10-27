@@ -1,0 +1,6 @@
+<% if @subject %>
+  $('#subject-modal').html('<%= escape_javascript(render "edit") %>')
+  $('#subject-modal').modal('show')
+<% else %>
+  $('.flash-messages').html('<%= escape_javascript(render "layouts/messages") %>')
+<% end %>
