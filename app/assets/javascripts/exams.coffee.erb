@@ -1,0 +1,11 @@
+countdown = ->
+  $('#clock').countdown
+    until: $('#remaining_time').val()
+    format: 'HMS'
+    onExpiry: ->
+      $('#finish_button').removeAttr('data-confirm')
+      $('#finish_button').click()
+      alert ('Timeout. The exam is finished. The result will be sent to you.')
+
+document.addEventListener 'turbolinks:load', countdown
+$(document).on 'page:update', countdown
