@@ -161,7 +161,7 @@ en:
       new:
         title: "Form Signup"
         Name: "Name"
-        Chatwork ID: "Chatwork ID"
+        Chatwork_ID: "Chatwork ID"
         Email: "Email"
         Password: "Password"
         PasswordConfirmation: "Password Confirmation"
