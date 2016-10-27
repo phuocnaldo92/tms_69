@@ -1,0 +1,6 @@
+<% if @level %>
+  $('#level-modal').html('<%= escape_javascript(render "edit") %>')
+  $('#level-modal').modal('show')
+<% else %>
+  $('.flash-messages').html('<%= escape_javascript(render "layouts/messages") %>')
+<% end %>
