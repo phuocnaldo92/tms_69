@@ -1,6 +1,6 @@
 <% is_disabled = !@exam.testing? %>
 <%= simple_form_for @exam do |f| %>
-  <ol>
+  <ol class="answer">
     <%= f.simple_fields_for :exam_questions do |question_builder| %>
       <li>
         <%= question_builder.object.question.content %>

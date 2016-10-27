@@ -1,4 +1,4 @@
-<div class="containes"
+<div class="containes">
   <div class="col-md-10 col-md-offset-1 width-flash">
     <div class="row exam">
       <div class="col-md-8 col-md-offset-1">
@@ -8,16 +8,10 @@
           <%= tag(:br) %>
           <center><b><h2><%= @exam.subject.name %></h2></b></center>
           <%= tag(:hr) %>
+          <input type="hidden" name="duration" id="duration" value="0">
         </div>
         <%= render "questions" %>
       </div>
-      <% if @exam.testing? %>
-        <%= hidden_field_tag :remaining_time, @exam.get_remain_time %>
-        <div class="col-md-2 col-md-offset-1 timer">
-          <h4><%= t ".time_remain" %></h4>
-          <div id="clock"></div>
-        </div>
-      <% end %>
     </div>
   </div>
 </div>
