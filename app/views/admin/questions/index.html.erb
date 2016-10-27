@@ -2,7 +2,7 @@
 <div class="row">
   <div class="col-md-12">
     <%= link_to t(".new_question"), new_admin_question_path,
-      remote: true, class: "btn btn-primary" %>
+      class: "btn btn-primary" %>
   </div>
 </div>
 <div class="row">
@@ -10,7 +10,8 @@
     <thead>
       <tr class="info">
         <th><%= t ".content" %></th>
-        <th><%= t ".create_by" %></th>
+        <th><%= t ".subject" %></th>
+        <th><%= t ".level" %></th>
         <th><%= t ".actions" %></th>
       </tr>
     </thead>

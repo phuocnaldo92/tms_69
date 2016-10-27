@@ -1,0 +1,37 @@
+<h1><%= t ".title" %></h1>
+<div class="row">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr class="info">
+        <th><%= t ".number_id" %></th>
+        <th><%= t ".content" %></th>
+        <th><%= t ".subject" %></th>
+        <th><%= t ".create_by" %></th>
+        <th><%= t ".create_date" %></th>
+        <th><%= t ".confirmed" %></th>
+        <th><%= t ".actions" %></th>
+      </tr>
+    </thead>
+    <tbody class="question-index">
+      <% @suggest_questions.each_with_index do |suggest_question, index| %>
+        <tr>
+          <td><%= index + Settings.each_question %></td>
+          <td><%= link_to suggest_question.content,
+            suggest_question_path(suggest_question) %>
+          </td>
+          <td><%= suggest_question.subject.name %></td>
+          <td><%= suggest_question.user.name %></td>
+          <td><%= time_tag suggest_question.created_at %></td>
+          <td><%= suggest_question.status %></td>
+          <td class="center">
+            <%= link_to t("suggest_questions.check"),
+              edit_admin_suggest_question_path(suggest_question),
+              class: "btn btn-info" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= will_paginate @suggest_questions %>
+  <div id="question-modal" class="modal fade"></div>
+</div>

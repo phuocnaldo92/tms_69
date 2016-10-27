@@ -16,6 +16,7 @@ class Admin::SubjectsController < ApplicationController
   end
 
   def show
+    @levels = @subject.levels
   end
 
   def create

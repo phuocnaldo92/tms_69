@@ -5,6 +5,7 @@ nguyenlink: "https://www.facebook.com/thaonguyen.tran.7311352"
 rubyrailslink: "http://www.railstutorial.org/"
 nothing: "#"
 minimum_suggest_answer: 1
+minimum_answer: 1
 reject_suggest_answer: 0
 each_question: 1
 pagination:
@@ -31,7 +32,7 @@ questions:
     single_choice: "single_choice"
     multi_choice: "multi_choice"
     text: "text"
-  type:
-    single_choice: "single_choice"
-    multi_choice: "multi_choice"
-    text: "text"
+suggest_questions:
+  status:
+    confirmed: "Approved"
+    rejected: "Rejected"

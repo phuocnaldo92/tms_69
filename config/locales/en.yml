@@ -1,4 +1,6 @@
 en:
+  accept: "Yes"
+  deny: "No"
   time_format: "%c"
   mrkhanh: "Mr. Khanh Mata"
   mrnhat: "Mr. Nguyen Hoang Nhat"
@@ -151,15 +153,15 @@ en:
   users:
     sessions:
       new:
-        MajesticLoginForm: "Majestic Login Form"
+        login_form: "Login"
         Login: "Log in"
-        Youremailorname: "Your email or name"
+        login_email: "Your email"
         Yourpassword: "Your password"
         Password: "Password"
-        EMAILORUSERNAME: "EMAIL OR USER NAME"
+        email_holder: "Email"
     registrations:
       new:
-        title: "Form Signup"
+        title: "Sign Up"
         Name: "Name"
         Chatwork_ID: "Chatwork ID"
         Email: "Email"
@@ -183,6 +185,7 @@ en:
       framgia: "Framgia"
       test: "Test System"
       users: "Users"
+      questions: "Questions"
     footer:
       AboutUs: "About Us"
       Duis: "Duis aute irure dolor in reprehenderit in voluptate
@@ -237,6 +240,7 @@ en:
         cancel_button: "Cancel"
         no_image: "There is no image to be shown."
       show:
+        subject_levels: "Subject Levels"
         question_type: "Type"
         action: "Action"
         create_by: "Create by"
@@ -263,6 +267,8 @@ en:
         edit: "Edit"
       form:
         cancel_button: "Cancel"
+      show:
+        level_questions: "Questions"
     users:
       form:
         title": Edit User
@@ -354,6 +360,9 @@ en:
   start: "Start"
   view: "View"
   suggest_questions:
+    show:
+      delete_question_confirm: "Are you sure?"
+    check: "Check"
     answer: "Answer"
     new:
       suggest_question: "Suggest Question"

@@ -13,6 +13,7 @@ class Admin::LevelsController < ApplicationController
   end
 
   def show
+    @questions = @level.questions
   end
 
   def new
