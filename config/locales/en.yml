@@ -161,7 +161,7 @@ en:
       new:
         title: "Form Signup"
         Name: "Name"
-        Chatwork ID: "Chatwork ID"
+        Chatwork_ID: "Chatwork ID"
         Email: "Email"
         Password: "Password"
         PasswordConfirmation: "Password Confirmation"
@@ -264,6 +264,8 @@ en:
       form:
         cancel_button: "Cancel"
     users:
+      form:
+        title": Edit User
       index_num: "Index"
       name: "Name"
       email: "Email"

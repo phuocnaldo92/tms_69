@@ -4,15 +4,16 @@
     <td><%= subject.duration %></td>
     <td class="text-center">
       <div class="btn-group" role="group">
-      <%= link_to t(".edit"), edit_admin_subject_path(subject.id),
-        class: "glyphicon glyphicon-edit" %>
+      <%= link_to image_tag("edit.png",
+        class:"img-responsi"), edit_admin_subject_path(subject.id),
+          remote: true, id: "edit_admin_subject"%>
       </div>
     </td>
-   <td class="text-center">
-    <div class="btn-group" role="group">
-    <%= link_to t(".delete"), admin_subject_path(subject.id),
-      method: :delete, data: {confirm: t(".delete_subject_confirm")},
-      class: "glyphicon glyphicon-trash" %>
+    <td class="text-center">
+      <div class="btn-group" role="group">
+      <%= link_to image_tag("delete.png",
+        class:"img-responsi"), admin_subject_path(subject.id),
+          method: :delete, data: {confirm: t(".delete_subject_confirm")}%>
       </div>
     </td>
   </tr>

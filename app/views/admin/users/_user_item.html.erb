@@ -1,28 +1,21 @@
 <tr>
   <td class="center"></td>
-  <td><%= link_to user.name, admin_user_path(user) %></td>
+  <td><%= user.name %></td>
   <td><%= user.email %></td>
   <td><%= user.chatwork_id %></td>
   <td><%= user.role.capitalize %></td>
   <td><%= l user.created_at, format: :date_month_year_concise %></td>
   <td class="center">
-    <%= link_to admin_user_path(user), remote: true,
-      data: {toggle: "modal", target: "#admin_users_modal"} do %>
-      <span class="glyphicon glyphicon-search"></span>
-      <%= t "admin.users.btn_view" %>
-    <% end %>
+    <%= link_to image_tag("view.png", class:"img-responsi"),
+      admin_user_path(user)%>
   </td>
   <td class="center">
-    <%= link_to edit_admin_user_path(user) do %>
-      <span class="glyphicon glyphicon-edit"></span>
-      <%= t "admin.users.btn_edit" %>
-    <% end %>
+    <%= link_to image_tag("edit.png", class:"img-responsi"),
+      edit_admin_user_path(user)%>
   </td>
   <td class="center">
-    <%= link_to admin_user_path(user), method: :delete, data:
-      {confirm: t("admin.users.delete_user")}, class: "text-danger" do %>
-      <span class="glyphicon glyphicon-remove"></span>
-      <%= t "admin.users.btn_delete" %>
-    <% end %>
+    <%= link_to image_tag("deleteuser.png", class:"img-responsi"),
+      admin_user_path(user), method: :delete, data:
+      {confirm: t("admin.users.delete_user")}%>
   </td>
 </tr>
