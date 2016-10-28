@@ -2,8 +2,8 @@ class ExamQuestion < ApplicationRecord
   belongs_to :exam
   belongs_to :question
 
-  has_many :exam_answers
-  has_many :answers, through: :exam_answers
+  has_many :exam_answers, dependent: :destroy
+  has_many :answers, dependent: :destroy, through: :exam_answers
 
   delegate :content, to: :question, allow_nil: :true
   accepts_nested_attributes_for :exam_answers, allow_destroy: true

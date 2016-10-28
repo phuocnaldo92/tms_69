@@ -1,7 +1,7 @@
 class Question < ApplicationRecord
   belongs_to :level
 
-  has_many :exam_questions
+  has_many :exam_questions, dependent: :destroy
   has_many :answers, dependent: :destroy
 
   enum status: {not_confirm: 0, confirmed: 1, rejected: 2}
