@@ -178,6 +178,9 @@ en:
         delete_account_confirm: "delete_account_confirm"
   layouts:
     header:
+      subjects: "Subjects"
+      levels: "Levels"
+      suggest_questions: "Suggest Questions"
       phones: "1 599-033-5036"
       date: "Mon-Sat 9:00 Am to 16:00 Pm"
       address: "General Pvt 66, Dong Da Hanoi, Vietnam."
@@ -276,8 +279,10 @@ en:
       show:
         level_questions: "Questions"
     users:
+      users_list:
+        title: "Users"
       form:
-        title": Edit User
+        title: "Edit User"
       index_num: "Index"
       name: "Name"
       email: "Email"
@@ -296,6 +301,8 @@ en:
         update_fail: "Update user fail"
       index:
         title: "All users"
+      form:
+        Chatwork_ID: "Chatwork ID"
     questions:
       answer: "Answer"
       new:

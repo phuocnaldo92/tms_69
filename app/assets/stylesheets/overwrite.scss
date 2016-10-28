@@ -1,8 +1,10 @@
 nav.link-effect-2 {
   @media (min-width: 690px) {
     overflow: visible;
-    margin-left: 258px;
-    width:42%;
+    float: right;
+    width: 67%;
+    margin: -21px;
+    margin-top: 0px;
     display: inline-block;
   }
 }

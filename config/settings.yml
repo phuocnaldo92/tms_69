@@ -3,6 +3,8 @@ khanhlink: "http://www.facebook.com/khanhmata.dn"
 nhatlink: "#"
 nguyenlink: "https://www.facebook.com/thaonguyen.tran.7311352"
 rubyrailslink: "http://www.railstutorial.org/"
+heroku: "https://domain.com"
+host: "http://localhost:3000"
 nothing: "#"
 minimum_suggest_answer: 1
 minimum_answer: 1
@@ -38,3 +40,7 @@ suggest_questions:
   status:
     confirmed: "Approved"
     rejected: "Rejected"
+facebook:
+  facebook: "Facebook"
+google_oauth2:
+  google: "Google"

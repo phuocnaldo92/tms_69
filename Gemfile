@@ -1,5 +1,8 @@
 source "https://rubygems.org"
 
+gem "omniauth"
+gem "omniauth-google-oauth2"
+gem "omniauth-facebook"
 gem "rails", "~> 5.0.0"
 gem "will_paginate", "3.1.0"
 gem "bootstrap-sass", "3.3.6"
@@ -22,7 +25,7 @@ gem "devise"
 gem "cancancan"
 gem "jquery-easing-rails"
 gem "jquery-countdown-rails"
-
+gem "figaro"
 group :development, :test do
   gem "byebug", platform: :mri
 end
