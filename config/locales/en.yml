@@ -200,6 +200,10 @@ en:
       phone: "0962 871 867"
       gmail: "tranthaonguyen.dsher@gmail.com"
   admin:
+    exams:
+      questions:
+        save: "Save"
+        checked: "Checked"
     subjects:
       index:
         create_subject: "New Subject"
@@ -361,6 +365,7 @@ en:
         inactive: "inactive"
   start: "Start"
   view: "View"
+  check: "Check"
   suggest_questions:
     edit:
       save_changes: "Save Changes"

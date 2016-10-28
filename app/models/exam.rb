@@ -28,14 +28,21 @@ class Exam < ApplicationRecord
     elsif self.testing?
       if (get_remain_time < 0 || is_finished_or_checked)
         self.uncheck!
+        calculate_score
       end
       update_spent_time
+    elsif self.uncheck? && is_finished_or_checked
+      self.checked!
     end
   end
 
   def get_remain_time
     endtime = self.started_at + subject.duration.minutes
     seconds = endtime.to_i - Time.now.to_i
+  end
+
+  def score
+    exam_questions.correct.count
   end
 
   private
@@ -56,5 +63,11 @@ class Exam < ApplicationRecord
     seconds = self.updated_at.to_i - start_time.to_i
     seconds = subject.duration.minutes if seconds > subject.duration.minutes
     self.update spent_time: seconds
+  end
+
+  def calculate_score
+    exam_questions.each do |exam_question|
+      exam_question.check_correct
+    end
   end
 end

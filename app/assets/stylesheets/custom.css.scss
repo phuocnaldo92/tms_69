@@ -182,6 +182,7 @@ table {
 td,
 th {
   padding: 0;
+  text-align: center;
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -253,6 +254,7 @@ th {
   .table td,
   .table th {
     background-color: #fff !important;
+    text-align: center;
   }
   .table-bordered th,
   .table-bordered td {
@@ -1412,6 +1414,10 @@ ol ul,
 ul ol,
 ol ol {
   margin-bottom: 0;
+}
+.answer > li > ul > li {
+  list-style-type: none;
+  margin:10px;
 }
 .list-unstyled {
   padding-left: 0;
