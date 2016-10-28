@@ -2,7 +2,7 @@ class Exam < ApplicationRecord
   belongs_to :user
   belongs_to :subject
 
-  has_many :exam_questions
+  has_many :exam_questions, dependent: :destroy
 
   delegate :name, to: :subject, allow_nil: :true
 

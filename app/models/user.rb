@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable, omniauth_providers: [:google_oauth2, :facebook]
-  has_many :exams
+  has_many :exams, dependent: :destroy
   has_many :suggest_questions, dependent: :destroy
 
   scope :newest, ->{order created_at: :desc}

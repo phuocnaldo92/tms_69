@@ -2,7 +2,7 @@ $(document).on 'ready page:load', ->
   $('#question_answer_type').on 'change', ->
     answer_type =  $(this).val()
     answer_text = '<div class="text_question">'
-    answer_text += '<label><%= I18n.t "questions.answer" %></label>'
+    answer_text += '<label>Answer</label>'
     answer_text += '<textarea class="form-control"'
     answer_text += 'name="question[answers_attributes][0][content]"'
     answer_text += 'id="question_answers_attributes_0_content">'
