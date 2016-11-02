@@ -7,4 +7,5 @@ class Subject < ApplicationRecord
   validates :duration, presence: true, numericality: {only_integer: true}
 
   scope :newest, ->{order created_at: :desc}
+  scope :search, ->subject_name {where "name LIKE ?", "#%{subject_name}%"}
 end

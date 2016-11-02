@@ -1,5 +1,5 @@
 <% is_disabled = true %>
-<% is_disabled_checking = @exam.start? || @exam.testing? %>
+<% is_disabled_checking = !@exam.uncheck? %>
 <%= simple_form_for [:admin, @exam] do |f| %>
   <ol class="answer">
     <%= f.simple_fields_for :exam_questions do |question_builder| %>
