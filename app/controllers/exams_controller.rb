@@ -17,7 +17,7 @@ class ExamsController < ApplicationController
   end
 
   def create
-    @exam = current_user.exams.new exam_params
+    @exam = current_user.exams.new exam_params_create
     if @exam.save
       respond_to do |format|
         format.js
@@ -39,10 +39,12 @@ class ExamsController < ApplicationController
   end
 
   private
+  def exam_params_create
+    params.require(:exam).permit :subject_id
+  end
   def exam_params
-    params.require(:exam).permit :subject_id,
-      exam_questions_attributes: [:id, exam_answers_attributes: [:id,
-      :answer_id, :content, :_destroy]]
+    params.require(:exam).permit exam_questions_attributes: [:id,
+      exam_answers_attributes: [:id, :answer_id, :content, :_destroy]]
   end
 
   def load_exam
