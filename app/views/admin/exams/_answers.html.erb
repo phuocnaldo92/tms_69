@@ -1,4 +1,4 @@
-<ul>
+<%= t "thay doi" %><ul>
   <%= question_builder.simple_fields_for :exam_answers do |answer_builder| %>
     <% if question_builder.object.question.multi_choice? %>
       <li>
